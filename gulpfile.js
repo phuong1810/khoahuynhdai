@@ -12,7 +12,8 @@ var browserSync = require("browser-sync");
 var gulpRanInThisFolder = process.cwd();
 var res = gulpRanInThisFolder.split("/");
 var ProjectName = res[res.length - 1];
-url  = "longvn.test/"+ProjectName+"";
+// url  = "longvn.test/"+ProjectName+"";
+url  = "http://localhost/"+ProjectName+"";
 var sourcemaps = require('gulp-sourcemaps')
 // :nested
 // :compact
