@@ -1,4 +1,6 @@
 node_modules/
+logs/
+caches/
 package-lock.json
 access_log
 error_log
