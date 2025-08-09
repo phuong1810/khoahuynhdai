@@ -5,6 +5,7 @@
 @import "mixin";
 @import "media-queries";
 @import "base";
+@import "footer";
 
 :root {
   --color-main: #104695;
@@ -2009,7 +2010,7 @@ img {
   display: block;
 }
 .footer {
-  background: url(../images/bg-footer.jpg) no-repeat top center;
+  background: #363535 no-repeat top center;
   color: #fff;
   padding: 40px 0 0;
   background-size: cover;
@@ -2062,14 +2063,17 @@ img {
   padding: 20px 0 20px 55px;
   background-size: 45px auto;
 }
+
 .email-footer {
-  font-size: 13px;
+  font-size: 98px;
+  
   @include SP {
-    margin-bottom: 10px;
+   margin-bottom: 10px;
   }
 }
 .gopy-footer {
-  font-size: 13px;
+  font-size: 93px;
+  
   a {
       color: #fff;
   }
@@ -2118,7 +2122,7 @@ img {
   }
 }
 .info-footer {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   @include SP {
     .d-flex {
       flex-wrap: wrap;
@@ -2200,16 +2204,17 @@ img {
 }
 @media only screen and (min-width: 1100px) {
   .cont-foot1 {
-      flex: 0 0 20%;
-      max-width: 20%;
+      flex: 0 0 33%;
+      max-width: 33%;
   }
   .cont-foot2 {
-      flex: 0 0 40%;
-      max-width: 40%;
+      
+      flex: 0 0 25% ;
+      max-width: 25%;
   }
   .cont-foot3 {
-      flex: 0 0 20%;
-      max-width: 20%;
+      flex: 0 0 16%;
+      max-width: 17%;
   }
   .cont-foot4 {
       flex: 0 0 20%;
@@ -2242,7 +2247,7 @@ img {
 .title-footer{
   text-transform: uppercase;
   margin: 0 0 8px;
-  font-size: 13px;
+  font-size: 18px;
   line-height: 26px;
   @include SP {
     font-size: 15px;
