@@ -1,5 +1,36 @@
 
+  
 <?php if(count($gioithieu)){ ?>
+    <section class="features">
+        <h3>TÍNH NĂNG</h3>
+        <h2>Tính năng nổi bật của Khóa cửa vân tay</h2>
+        
+        <div class="features-list">
+            <div class="feature-item">
+                <img src="assets/images/24-phone1.png" >
+                <h4>Chia sẻ chìa khoá từ xa</h4>
+                <p>Chia sẻ quyền mở khoá từ xa theo thời gian tuỳ chọn, không cần đứng gần khoá</p>
+            </div>
+
+            <div class="feature-item">
+                <img src="assets/images/24-phone.png" alt="phone24">
+                <h4>Quản lý qua ứng dụng di động</h4>
+                <p>Bạn có thể cài đặt thêm hoặc xoá người dùng tạm thời và mở khoá từ xa tuỳ ý</p>
+            </div>
+
+            <div class="feature-item">
+                <img src="assets/images/24-phone3.png" >
+                <h4>Lưu trữ và ghi chép lịch sử</h4>
+                <p>Kiểm tra lịch sử ra vào của khoá</p>
+            </div>
+
+            <div class="feature-item">
+                <img src="assets/images/24-phone4.png" >
+                <h4>Hình thức mở khoá đa dạng</h4>
+                <p>Tích hợp mở khoá đa dạng: mật khẩu, vân tay, thẻ từ và liên kết với app điện thoại...</p>
+            </div>
+        </div>
+    </section>
     <div class="wrap-about">
         <div class="wrap-content">
             <div class="title-global">

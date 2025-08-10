@@ -6,6 +6,8 @@
 @import "media-queries";
 @import "base";
 @import "footer";
+@import "features";
+
 
 :root {
   --color-main: #104695;
@@ -4005,3 +4007,5 @@ h3.title-formsp {
     padding-left: 10px;
   }
 }
+
+

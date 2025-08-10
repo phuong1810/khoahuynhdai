@@ -1,0 +1,49 @@
+.features {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+
+   h3 {
+    color: #3bb0b8;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+
+  .features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+
+    .feature-item {
+      text-align: center;
+
+      img {
+        width: 140px;
+        height:140px;
+        margin-bottom: 15px;
+      }
+
+      h4 {
+        font-size: 18px;
+        color: #3bb0b8;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 14px;
+        color: #333;
+        line-height: 1.4;
+      }
+    }
+  }
+}
