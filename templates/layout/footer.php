@@ -23,79 +23,103 @@
             <div class="col-12 col-sm-5 col-md-2 cont-foot2">
                 <div class="title-footer">TỔNG ĐÀI HỖ TRỢ </div>
                 <div class="info-footer">
-                    <div class="d-flex align-items-center  info-footer--v2">
-                        <ul class="list">
-                            <li class="icon">
+                    <div class="d-flex   info-footer--v2">
+                         <div class="info-box2">
+                            <div class="icon-circle">
                                 <i class="fa-solid fa-phone"></i>
-                                Tư vấn trực tiếp
-                                <br>
-                                <span>0944405482</span>
-                            </li>
-                            <li class="icon">
+                            </div>
+                            <div class="info-text">
+                                <div>Tư vấn trực tiếp</div>
+                                <span>0944 405 482</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-box">
+                            <div class="icon-circle">
                                 <i class="fa-solid fa-mobile-screen"></i>
-                                Khiếu nại & Bảo hành
-                                <br>
-                                <span>0944405482</span>
-                            </li>
-                            <li>
-                                <em>Phục vụ 24/7(cả ngày lễ và chủ nhật)</em>
-                            </li>
-                        </ul>
+                            </div>
+                            <div class="info-text">
+                                <div>Khiếu nại &amp; Bảo hành</div>
+                                <span>0944 405 482</span>
+                            </div>
+                        </div>
+                        <div class="footer-note">
+                             Phục vụ 24/7 (cả ngày lễ và chủ nhật)
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 cont-foot4">
                <div class="col-inner">
                     <p>
-                        <strong>SẢN PHẨM</strong>
+                        <strong class="title-footer">SẢN PHẨM</strong>
                     </p>
-                    <p class="sp-color">
-                        <strong>
-                            <a href="https://hyundaismartlock.vn/danh-muc-san-pham/khoa-cua-nhom/">Khóa cửa nhôm</a>
-                        </strong>
-                        <br>
-                        <strong>
-                            <a href="https://hyundaismartlock.vn/danh-muc-san-pham/khoa-cua-go/">Khóa cửa gỗ</a>
-                        </strong>
-                        <br>
-                        <strong>
-                            <a href="https://hyundaismartlock.vn/danh-muc-san-pham/khoa-cua-cong/">Khóa cửa cổng</a>
-                        </strong>
-                        <br>
+                    <strong>
+                        <a href="https://hyundaismartlock.vn/danh-muc-san-pham/khoa-cua-nhom/">
+                            <span class="sp-color">khóa cửa nhôm</span>
+                        </a>
+                    </strong>
+                    <br>
+                    <strong>
+                        <a href="https://hyundaismartlock.vn/danh-muc-san-pham/khoa-cua-go/">
+                            <span class="sp-color">khóa cửa gỗ</span>
+                        </a>
+                    </strong>
+                    <br>
+                    <strong>
+                        <a href="https://hyundaismartlock.vn/danh-muc-san-pham/khoa-cua-cong/">
+                            <span class="sp-color">Khóa cửa cổng</span>
+                        </a>
+                    </strong>
+                    <br>
+                    <strong>
                         <a href="https://hyundaismartlock.vn/danh-muc-san-pham/khoa-khach-san/">
-                            <strong>Khóa khách sạn</strong>
+                            <span class="sp-color">Khóa khách sạn</span>
                         </a>
-                        <br>
+                    </strong>
+                    <br>
+                    <strong>
                         <a href="https://hyundaismartlock.vn/danh-muc-san-pham/khoa-face-id/">
-                            <strong>Khóa Face ID</strong>
+                            <span class="sp-color">Khóa Face ID</span>
                         </a>
-                        <br>
+                    </strong>
+                    <br>
+                    <strong>
                         <a href="https://hyundaismartlock.vn/danh-muc-san-pham/khoa-dai-sanh/">
-                            <strong>Khóa biệt thự, đại sảnh</strong>
+                            <span class="sp-color">Khóa biệt thự, đại sảnh</span>
                         </a>
-                    </p>
+                    </strong>
+                
 		        </div>
 
                 
 
 
             </div>
-            <div class="col-12 col-sm-12 col-md-6 cont-foot3">
+            <d class="col-12 col-sm-12 col-md-6 cont-foot3">
                 <div class="title-footer">CHÍNH SÁCH</div>
-                <ul class="mb24">
-                    <?php foreach($chinhsach as $k=>$v){if($k<6){?>
-                        <li><a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>"><span>- <?=$v['name'.$lang]?></span></a></li>
-                    <?php } } ?>
-                </ul>
-                <div class="title-footer">HỢP TÁC & TÀI TRỢ</div>
-                <div class="cont-hoptac"> <?= $func->decodeHtmlChars($optsetting['hoptac']) ?></div>
+                    <ul class="mb24">
+                        <?php foreach($chinhsach as $k=>$v){if($k<6){?>
+                            <li><a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>"><span class="CS-footer">- <?=$v['name'.$lang]?></span></a></li>
+                        <?php } } ?>
+                    </ul>
             </div>
-            
         </div>
-       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+       <div class="floating-buttons">
+            <!-- Zalo -->
+            <a class="zalo-btn" href="https://zalo.me/YOUR_NUMBER" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
+            </a>
 
-        <div class="copyright">
-            <?=$optsetting['copyright']?>
+            <!-- Hotline -->
+            <a class="hotline-btn" href="tel:0944 405 482">
+                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="text">
+                    <span class="label">HOTLINE</span>
+                    <span class="number">0944 405 482</span>
+                </div>
+            </a>
         </div>
     </div>
 </div>
