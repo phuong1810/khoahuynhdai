@@ -1,38 +1,6 @@
-
-<?php if(count($gioithieu)){ ?>
-    <div class="wrap-about">
-        <div class="wrap-content">
-            <div class="title-global">
-                <div class="ttl"><span>Về chúng tôi</span></div>
-                <div class="ttl2"><?= $func->decodeHtmlChars($gioithieu['name' . $lang]) ?></div>
-            </div>
-            <div class="row">
-
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-
-                    <?php if(count($bvgioithieu)){ ?>
-                        <ul class="bvgioithieu">
-                        <?php foreach ($bvgioithieu as $k=>$v) { ?>
-                            <li class="it-bvgioithieu">
-                                <div class="numb"><?=$k+1?></div>
-                                <div class="ttl"><?=$v['name'.$lang]?></div>
-                                <div class="desc"><?=$v['desc'.$lang]?></div>
-                            </li>
-                        <?php } ?>
-                        </ul>
-                    <?php } ?>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="img-about">
-                        <?= $func->getImage(['sizes' => '510x510x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_NEWS_L, 'image' => $gioithieu['photo'], 'alt' => $gioithieu['name' . $lang]]) ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php } ?>
 <div class="content-static">
     <div class="wrap-content">
+        <div class="title-global title-global--center"><span class="ttl2"><?= $static['name' . $lang] ?></span></div>
         <?php if (!empty($static)) { ?>
             <div class="content-main w-clear wrap-content"><?= $func->decodeHtmlChars($static['content' . $lang]) ?></div>
         <?php } else { ?>

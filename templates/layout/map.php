@@ -9,10 +9,9 @@
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-5">
-                <div class="bg-map box-tuvan">
+                <div class="bg-map bg-map02 box-tuvan">
                     <div class="title-global">
-                        <div class="ttl"><span>Thần Sơn Group</span></div>
-                        <div class="ttl2">Liên hệ</div>
+                        <div class="ttl2 ttl4">Liên hệ</div>
                     </div>
                     <div class="contact-text"><?= htmlspecialchars_decode($lienhe['content' . $lang]) ?></div>
 

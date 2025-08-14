@@ -131,22 +131,12 @@ $options = (isset($item['options']) && $item['options'] != '') ? json_decode($it
                 <?php } ?>
                 <div class="row">
                     <?php if (isset($config['setting']['address']) && $config['setting']['address'] == true) { ?>
-                        <div class="form-group col-md-4 col-sm-6">
-                            <label for="hoptac">Hợp tác và tài trợ:</label>
-                            <textarea class="form-control text-sm" name="data[options][hoptac]" id="hoptac" rows="5" placeholder="Hợp tác và tài trợ"><?= $func->decodeHtmlChars($flash->get('hoptac')) ?: $func->decodeHtmlChars(@$options['hoptac']) ?></textarea>
-                        </div>
+
                         <div class="form-group col-md-4 col-sm-6">
                             <label for="address">Địa chỉ:</label>
                             <input type="text" class="form-control text-sm" name="data[options][address]" id="address" placeholder="Địa chỉ" value="<?= (!empty($flash->has('address'))) ? $flash->get('address') : @$options['address'] ?>" required>
                         </div>
-                        <div class="form-group col-md-4 col-sm-6">
-                            <label for="vanphong">Văn Phòng:</label>
-                            <input type="text" class="form-control text-sm" name="data[options][vanphong]" id="vanphong" placeholder="Văn Phòng" value="<?= (!empty($flash->has('vanphong'))) ? $flash->get('vanphong') : @$options['vanphong'] ?>" required>
-                        </div>
-                        <div class="form-group col-md-4 col-sm-6">
-                            <label for="xuongsanxuat">Xưởng sản xuất:</label>
-                            <input type="text" class="form-control text-sm" name="data[options][xuongsanxuat]" id="xuongsanxuat" placeholder="Xưởng sản xuất" value="<?= (!empty($flash->has('xuongsanxuat'))) ? $flash->get('xuongsanxuat') : @$options['xuongsanxuat'] ?>" required>
-                        </div>
+
                         <div class="form-group col-md-4 col-sm-6">
                             <label for="bct">Link bộ công thương:</label>
                             <input type="text" class="form-control text-sm" name="data[options][bct]" id="bct" placeholder="Link bộ công thương" value="<?= (!empty($flash->has('bct'))) ? $flash->get('bct') : @$options['bct'] ?>" required>
@@ -157,14 +147,6 @@ $options = (isset($item['options']) && $item['options'] != '') ? json_decode($it
                             <label for="email">Email:</label>
                             <input type="email" class="form-control text-sm" name="data[options][email]" id="email" placeholder="Email" value="<?= (!empty($flash->has('email'))) ? $flash->get('email') : @$options['email'] ?>" required>
                         </div>
-                        <div class="form-group col-md-4 col-sm-6">
-                            <label for="email2">Email2:</label>
-                            <input type="email2" class="form-control text-sm" name="data[options][email2]" id="email2" placeholder="Email2" value="<?= (!empty($flash->has('email2'))) ? $flash->get('email2') : @$options['email2'] ?>" required>
-                        </div>
-                        <div class="form-group col-md-4 col-sm-6">
-                            <label for="email3">Email3:</label>
-                            <input type="email3" class="form-control text-sm" name="data[options][email3]" id="email3" placeholder="Email3" value="<?= (!empty($flash->has('email3'))) ? $flash->get('email3') : @$options['email3'] ?>" required>
-                        </div>
                     <?php } ?>
                     <?php if (isset($config['setting']['hotline']) && $config['setting']['hotline'] == true) { ?>
                         <div class="form-group col-md-4 col-sm-6">
@@ -174,8 +156,12 @@ $options = (isset($item['options']) && $item['options'] != '') ? json_decode($it
                     <?php } ?>
                     <?php if (isset($config['setting']['phone']) && $config['setting']['phone'] == true) { ?>
                         <div class="form-group col-md-4 col-sm-6">
-                            <label for="phone">Tư vấn đặt hàng:</label>
-                            <input type="text" class="form-control text-sm" name="data[options][phone]" id="phone" placeholder="Tư vấn đặt hàng" value="<?= (!empty($flash->has('phone'))) ? $flash->get('phone') : @$options['phone'] ?>" required>
+                            <label for="phone">Tư vấn trực tiếp:</label>
+                            <input type="text" class="form-control text-sm" name="data[options][phone]" id="phone" placeholder="Tư vấn trực tiếp" value="<?= (!empty($flash->has('phone'))) ? $flash->get('phone') : @$options['phone'] ?>" required>
+                        </div>
+                        <div class="form-group col-md-4 col-sm-6">
+                            <label for="phone2">Khiếu nại & Bảo hành:</label>
+                            <input type="text" class="form-control text-sm" name="data[options][phone2]" id="phone2" placeholder="Khiếu nại & Bảo hành" value="<?= (!empty($flash->has('phone2'))) ? $flash->get('phone2') : @$options['phone2'] ?>" required>
                         </div>
                     <?php } ?>
                     <?php if (isset($config['setting']['zalo']) && $config['setting']['zalo'] == true) { ?>
@@ -206,10 +192,6 @@ $options = (isset($item['options']) && $item['options'] != '') ? json_decode($it
                         <div class="form-group col-md-4 col-sm-6">
                             <label for="coords">Tọa độ google map:</label>
                             <input type="text" class="form-control text-sm" name="data[options][coords]" id="coords" placeholder="Tọa độ google map" value="<?= (!empty($flash->has('coords'))) ? $flash->get('coords') : @$options['coords'] ?>">
-                        </div>
-                        <div class="form-group col-md-4 col-sm-6">
-                            <label for="cauhoi">Mô tả Câu Hỏi Thường Gặp Của Chúng Tôi:</label>
-                            <input type="text" class="form-control text-sm" name="data[options][cauhoi]" id="cauhoi" placeholder="Mô tả Câu Hỏi Thường Gặp Của Chúng Tôi" value="<?= (!empty($flash->has('cauhoi'))) ? $flash->get('cauhoi') : @$options['cauhoi'] ?>">
                         </div>
                         <div class="form-group col-md-4 col-sm-6">
                             <label for="tuvan">Mô tả Bạn cần tư vấn ?:</label>

@@ -106,107 +106,129 @@
 
 
                 </div>
+                <div class="bottom-product-detail">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-lg-9">
+                            <div class="tags-pro-detail w-clear">
+                                <?php if (!empty($rowTags)) {
+                                    foreach ($rowTags as $v) { ?>
+                                        <a class="btn btn-sm btn-danger rounded" href="<?= $v[$sluglang] ?>"
+                                            title="<?= $v['name' . $lang] ?>"><i class="fas fa-tags"></i><?= $v['name' . $lang] ?></a>
+                                <?php }
+                                } ?>
+                            </div>
+
+                            <div class="tabs-pro-detail">
+                                <ul class="nav nav-tabs" id="tabsProDetail" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="info-pro-detail-tab" data-toggle="tab"
+                                            href="#info-pro-detail" role="tab"><?= thongtinsanpham ?></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="commentfb-pro-detail-tab" data-toggle="tab"
+                                            href="#commentfb-pro-detail" role="tab"><?= binhluan ?></a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content pt-4 pb-4" id="tabsProDetailContent">
+                                    <div class="tab-pane fade show active" id="info-pro-detail" role="tabpanel">
+                                        <div id="toc-content" class="cms-content">
+                                            <?= $func->decodeHtmlChars($rowDetail['content' . $lang]) ?>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="commentfb-pro-detail" role="tabpanel">
+                                        <div class="fb-comments" data-href="<?= $func->getCurrentPageURL() ?>" data-numposts="3"
+                                            data-colorscheme="light" data-width="100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-lg-3">
+                            <div class="meta-toc">
+                                <div class="box-readmore">
+                                    <ul class="toc-list" data-toc="article" data-toc-headings="h1, h2, h3"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-detail">
+                    <div class="title-global">
+                        <div class="ttl2"><?= sanphamcungloai ?></div>
+                    </div>
+                    <div class="content-main row">
+                        <?php if (!empty($product)) {
+                            foreach ($product as $k => $v) { ?>
+                                <div class="col-6 col-sm-6 col-md-4">
+                                    <div class="box-product">
+                                        <div class="product">
+                                            <div class="text-decoration-none">
+                                                <p class="pic-product scale-img">
+                                                    <a class="scale-img" href="<?= $v[$sluglang] ?>" title="<?= $v['name' . $lang] ?>">
+                                                        <?= $func->getImage(['sizes' => '261x229x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+                                                    </a>
+                                                </p>
+                                                <h3 class="name-product text-split">
+                                                    <a href="<?= $v[$sluglang] ?>" title="<?= $v['name' . $lang] ?> "><?= $v['name' . $lang] ?> </a>
+                                                </h3>
+                                                <a class="baogia-product" href="tel:<?= $func->parsePhone($optsetting['hotline']) ?>"><span>Báo giá:</span><b><?= $optsetting['hotline'] ?></b></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php }
+                        } else { ?>
+                            <div class="col-12">
+                                <div class="alert alert-warning w-100" role="alert">
+                                    <strong><?= khongtimthayketqua ?></strong>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        <div class="clear"></div>
+                        <div class="col-12">
+                            <div class="pagination-home w-100"><?= (!empty($paging)) ? $paging : '' ?></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-12 col-sm-12 col-lg-3">
-                <div class="product-addon">
-                    <ul class="info-list">
-                        <?php foreach($tinhtrang as $v) {?>
-                        <li>
-                            <span><?=$v['name'.$lang]?></span>
-                            <span>
-                                <p style="text-align: justify;"><?=$v['desc'.$lang]?></p>
-                            </span>
-                        </li>
-                        <?php } ?>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="bottom-product-detail">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-lg-9">
-                    <div class="tags-pro-detail w-clear">
-                        <?php if (!empty($rowTags)) {
-                            foreach ($rowTags as $v) { ?>
-                                <a class="btn btn-sm btn-danger rounded" href="<?= $v[$sluglang] ?>"
-                                    title="<?= $v['name' . $lang] ?>"><i class="fas fa-tags"></i><?= $v['name' . $lang] ?></a>
-                        <?php }
-                        } ?>
-                    </div>
+                <div class="box-detail box-detail-sticky">
+                    <!-- <div class="box-detail-sticky"> -->
+                        <div class="box-tuvan" id="cauhoithuonggap">
+                            <div class="title-global">
+                                <h2 class="ttl3">Bạn cần tư vấn ?</h2>
+                                <p class="txt"><?=$optsetting['tuvan']?></p>
+                            </div>
+                            <div class="box-nhanvien">
+                                <?php foreach($tuvan as $k=>$v){
+                                    $opttuvan = (!empty($v['options'])) ? json_decode($v['options'], true) : null;
+                                ?>
+                                    <div class="item-nhanvien item-nhanvien--v2">
+                                        <div class="d-flex">
+                                            <div class="img-thumb">
+                                                <?= $func->getImage(['class' => 'lazy w-100', 'sizes' => '150x150x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+                                            </div>
+                                            <div class="nv-info">
+                                                <p class="nv-desc"><span><?=$v['desc'.$lang]?></span></p>
+                                                <p class="nv-ttl"><span><?=$v['name'.$lang]?></span></p>
+                                                <p class="nv-hotline"><a href="tel:<?= $func->parsePhone($opttuvan['hotline']) ?>">HOTLINE: <?=$opttuvan['hotline']?></a></p>
 
-                    <div class="tabs-pro-detail">
-                        <ul class="nav nav-tabs" id="tabsProDetail" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="info-pro-detail-tab" data-toggle="tab"
-                                    href="#info-pro-detail" role="tab"><?= thongtinsanpham ?></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="commentfb-pro-detail-tab" data-toggle="tab"
-                                    href="#commentfb-pro-detail" role="tab"><?= binhluan ?></a>
-                            </li>
-                        </ul>
-                        <div class="tab-content pt-4 pb-4" id="tabsProDetailContent">
-                            <div class="tab-pane fade show active" id="info-pro-detail" role="tabpanel">
-                                <div id="toc-content">
-                                    <?= $func->decodeHtmlChars($rowDetail['content' . $lang]) ?>
-                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nv-btn">
+                                            <a href="tel:<?= $func->parsePhone($opttuvan['goingay']) ?>">Gọi ngay</a>
+                                            <a href="https://zalo.me/<?= $func->parsePhone($opttuvan['zalo']) ?>">Chat Zalo</a>
+                                        </div>
+                                    </div>
+                                <?php } ?>
                             </div>
-                            <div class="tab-pane fade" id="commentfb-pro-detail" role="tabpanel">
-                                <div class="fb-comments" data-href="<?= $func->getCurrentPageURL() ?>" data-numposts="3"
-                                    data-colorscheme="light" data-width="100%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-lg-3">
-                    <div class="meta-toc">
-                        <div class="box-readmore">
-                            <ul class="toc-list" data-toc="article" data-toc-headings="h1, h2, h3"></ul>
-                        </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
         </div>
+
 
 
     </div>
-    <div class="box-detail">
-        <div class="title-global">
-            <div class="ttl">BĂNG KEO THẦN SƠN</div>
-            <div class="ttl2"><?= sanphamcungloai ?></div>
-        </div>
-        <div class="content-main row">
-            <?php if (!empty($product)) {
-                foreach ($product as $k => $v) { ?>
-                    <div class="col-6 col-sm-6 col-md-3">
-                        <div class="box-product">
-                            <div class="product">
-                                <div class="text-decoration-none">
-                                    <p class="pic-product scale-img">
-                                        <a class="scale-img" href="<?= $v[$sluglang] ?>" title="<?= $v['name' . $lang] ?>">
-                                            <?= $func->getImage(['sizes' => '261x229x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
-                                        </a>
-                                    </p>
-                                    <h3 class="name-product text-split">
-                                        <a href="<?= $v[$sluglang] ?>" title="<?= $v['name' . $lang] ?> "><?= $v['name' . $lang] ?> </a>
-                                    </h3>
-                                    <a class="baogia-product" href="tel:<?= $func->parsePhone($optsetting['hotline']) ?>"><span>Báo giá:</span><b><?= $optsetting['hotline'] ?></b></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php }
-            } else { ?>
-                <div class="col-12">
-                    <div class="alert alert-warning w-100" role="alert">
-                        <strong><?= khongtimthayketqua ?></strong>
-                    </div>
-                </div>
-            <?php } ?>
-            <div class="clear"></div>
-            <div class="col-12">
-                <div class="pagination-home w-100"><?= (!empty($paging)) ? $paging : '' ?></div>
-            </div>
-        </div>
-    </div>
+
 </div>

@@ -12,7 +12,7 @@ $dichvu = $cache->get("select name$lang,desc$lang from #_news where type = ? and
 
 $faq = $cache->get("select name$lang,desc$lang from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('faq'), 'result', 7200);
 
-$tinhtrang = $cache->get("select name$lang,desc$lang,options,photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('tinhtrang'), 'result', 7200);
+$tuvan = $cache->get("select name$lang,desc$lang,options,photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('tuvan'), 'result', 7200);
 
 $trangtb = $cache->get("select name$lang, desc$lang, photo, photo2, content$lang from #_static where type = ? limit 0,1", array('trang-tb'), 'fetch', 7200);
 $bvtrangtb = $cache->get("select name$lang,desc$lang,photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('bvtrangtb'), 'result', 7200);
@@ -23,6 +23,7 @@ $baogia = $cache->get("select name$lang,desc$lang,photo from #_news where type =
 
 //footer
 $footer = $cache->get("select name$lang, content$lang, photo from #_static where type = ? limit 0,1", array('footer'), 'fetch', 7200);
+$slogan = $cache->get("select content$lang, photo from #_static where type = ? limit 0,1", array('slogan'), 'fetch', 7200);
 $huongdan = $cache->get("select name$lang,desc$lang,options,photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('huong-dan'), 'result', 7200);
 $chinhsach = $cache->get("select name$lang,desc$lang,options,photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('chinh-sach'), 'result', 7200);
 $dslienhe = $cache->get("select name$lang,desc$lang,options,photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('dslienhe'), 'result', 7200);

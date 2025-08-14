@@ -16,7 +16,7 @@
         <div class="wrap-main <?= ($source != 'index') ? 'wrap-home' : '' ?> w-clear <?= ($source == 'room') ? 'bg-room' : '' ?>">
             <?php
                 include TEMPLATE . LAYOUT . "slide.php";
-                //if ($source != 'index') include TEMPLATE . LAYOUT . "breadcrumb.php";
+                // if ($source != 'index') include TEMPLATE . LAYOUT . "breadcrumb.php";
                 include TEMPLATE . $template . "_tpl.php";
             ?>
         </div>

@@ -185,12 +185,12 @@ switch ($com) {
         break;
 
 
-    case 'hoat-dong':
+    case 'chinh-sach':
         $source = "news";
-        $template = isset($_GET['id']) ? "album/album_detail" : "album/album";
+        $template = isset($_GET['id']) ? "news/news_detail" : "news/news";
         $seo->set('type', isset($_GET['id']) ? "article" : "object");
-        $type = "hoat-dong";
-        $titleMain = "Hoạt động";
+        $type = "chinh-sach";
+        $titleMain = "Chính sách";
         break;
     case 'ngon-ngu':
         if (isset($lang)) {

@@ -5,8 +5,8 @@
   text-align: center;
 
    h3 {
-    color: #3bb0b8;
-    font-weight: bold;
+    color: var(--color-main2);
+    font-weight: 700;
     font-size: 25px;
     margin-bottom: 8px;
     text-transform: uppercase;
@@ -15,7 +15,7 @@
   h2 {
     font-size: 35px;
     margin-bottom: 40px;
-    font-weight: bold;
+    font-weight: 700;
   }
 
   .features-list {
@@ -34,9 +34,9 @@
 
       h4 {
         font-size: 18px;
-        color: #3bb0b8;
+        color: var(--color-main);
         margin-bottom: 8px;
-        font-weight: bold;
+        font-weight: 700;
       }
 
       p {

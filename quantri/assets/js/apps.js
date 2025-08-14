@@ -845,7 +845,7 @@ function slugCheck() {
 /* Reader image */
 function readImage(inputFile, elementPhoto) {
 	if (inputFile[0].files[0]) {
-		if (inputFile[0].files[0].name.match(/.(jpg|jpeg|png|gif)$/i)) {
+		if (inputFile[0].files[0].name.match(/.(jpg|jpeg|png|gif|webp)$/i)) {
 			var size = parseInt(inputFile[0].files[0].size) / 1024;
 
 			if (size <= 4096) {

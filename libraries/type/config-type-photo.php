@@ -47,7 +47,6 @@ $config['photo']['man_photo'][$nametype]['title_main_photo'] = "Slideshow";
 $config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => "Hiển thị");
 $config['photo']['man_photo'][$nametype]['number_photo'] = 2;
 $config['photo']['man_photo'][$nametype]['images_photo'] = true;
-$config['photo']['man_photo'][$nametype]['images_photo2'] = true;
 $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
 $config['photo']['man_photo'][$nametype]['link_photo'] = true;
 $config['photo']['man_photo'][$nametype]['video_photo'] = true;
@@ -71,60 +70,4 @@ $config['photo']['man_photo'][$nametype]['name_photo'] = true;
 $config['photo']['man_photo'][$nametype]['width_photo'] = 217;
 $config['photo']['man_photo'][$nametype]['height_photo'] = 120;
 $config['photo']['man_photo'][$nametype]['thumb_photo'] = '175x95x2';
-$config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
-
-/* Hoạt động */
-$nametype = "hoatdong";
-$config['photo']['man_photo'][$nametype]['title_main_photo'] = "Hoạt động";
-$config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => "Hiển thị");
-$config['photo']['man_photo'][$nametype]['number_photo'] = 4;
-$config['photo']['man_photo'][$nametype]['images_photo'] = true;
-$config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
-$config['photo']['man_photo'][$nametype]['width_photo'] = 470*2;
-$config['photo']['man_photo'][$nametype]['height_photo'] = 500*2;
-$config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
-$config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
-
-
-/* Slideshow About */
-$nametype = "gioi-thieu";
-$config['photo']['man_photo'][$nametype]['title_main_photo'] = "Slideshow Giới thiệu";
-$config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => "Hiển thị");
-$config['photo']['man_photo'][$nametype]['number_photo'] = 2;
-$config['photo']['man_photo'][$nametype]['images_photo'] = true;
-$config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
-$config['photo']['man_photo'][$nametype]['link_photo'] = true;
-$config['photo']['man_photo'][$nametype]['name_photo'] = true;
-$config['photo']['man_photo'][$nametype]['width_photo'] = 1920;
-$config['photo']['man_photo'][$nametype]['height_photo'] = 1080;
-$config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
-$config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
-
-/* Slideshow About */
-$nametype = "san-pham";
-$config['photo']['man_photo'][$nametype]['title_main_photo'] = "Slideshow sản phẩm";
-$config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => "Hiển thị");
-$config['photo']['man_photo'][$nametype]['number_photo'] = 2;
-$config['photo']['man_photo'][$nametype]['images_photo'] = true;
-$config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
-$config['photo']['man_photo'][$nametype]['link_photo'] = true;
-$config['photo']['man_photo'][$nametype]['name_photo'] = true;
-$config['photo']['man_photo'][$nametype]['width_photo'] = 1920;
-$config['photo']['man_photo'][$nametype]['height_photo'] = 1080;
-$config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
-$config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
-
-
-
-/* Mạng xã hội */
-$nametype = "social";
-$config['photo']['man_photo'][$nametype]['title_main_photo'] = "Mạng xã hội";
-$config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => "Hiển thị");
-$config['photo']['man_photo'][$nametype]['number_photo'] = 4;
-$config['photo']['man_photo'][$nametype]['images_photo'] = true;
-$config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
-$config['photo']['man_photo'][$nametype]['link_photo'] = true;
-$config['photo']['man_photo'][$nametype]['width_photo'] = 1920;
-$config['photo']['man_photo'][$nametype]['height_photo'] = 1080;
-$config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
 $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';

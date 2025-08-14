@@ -1,25 +1,7 @@
 <div class="header <?php if ($source != 'index') { echo 'header-product';} ?>">
   <div class="header-top">
     <div class="wrap-content">
-      <div class="d-flex">
-        <div class="info-header">
-          <div class="info-header-v2 address">Địa chỉ: <?=$optsetting['address']?></div>
-          <div  class="info-header-v2 email"><?=$optsetting['email']?></div>
-        </div>
-        <?php if (!empty($social)) { ?>
-          <div class="social">
-            <ul>
-              <?php foreach ($social as $v) { ?>
-                <li>
-                  <a href="<?= $v['link'] ?>" target="_blank" title="Mạng xã hội">
-                    <?= $func->getImage(['class' => 'lazy w-100', 'sizes' => '', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => 'Mạng xã hội']) ?>
-                  </a>
-                </li>
-              <?php } ?>
-            </ul>
-          </div>
-        <?php } ?>
-      </div>
+      <marquee behavior="scroll" direction="left" scrollamount="4"><?= $func->decodeHtmlChars($slogan['content' . $lang]) ?></marquee>
     </div>
   </div>
   <div class="header-midd">
@@ -28,7 +10,6 @@
         <div class="cont-left">
           <a class="logo-header" href="">
             <?= $func->getImage(['sizes' => '', 'upload' => UPLOAD_PHOTO_L, 'image' => $logo['photo'], 'alt' => $setting['name' . $lang]]) ?>
-            <h2 class="ttl">Dây Ni long Thần Sơn</h2>
           </a>
         </div>
         <div class="cont-midd">

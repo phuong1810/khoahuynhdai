@@ -31,12 +31,11 @@
                 </ul>
             <?php } ?>
             </li>
-            <li>
-            <a class="<?php if ($com == 'dich-vu') echo 'active'; ?> transition" href="dich-vu" title="DỊCH VỤ">DỊCH VỤ</a>
-            </li>
-            <li><a class="<?php if ($com == 'hoat-dong') echo 'active'; ?> transition" href="hoat-dong" title="Hoạt động">HOẠT ĐỘNG</a></li>
+
+
             <li><a class="<?php if ($com == 'tin-tuc') echo 'active'; ?> transition" href="tin-tuc" title="TIN TỨC">TIN TỨC</a></li>
             <li><a class="<?php if ($com == 'lien-he') echo 'active'; ?> transition" href="lien-he" title="LIÊN HỆ">LIÊN HỆ</a></li>
+            <li><a class="<?php if ($com == 'chinh-sach') echo 'active'; ?> transition" href="chinh-sach" title="Chính sách">CHÍNH SÁCH</a></li>
             <div class="mobile_menu_section mm-listitem">
                 <p class="mobile_menu_section-title">Thông Tin Liên Hệ</p><br>
                 <p class="mobile_menu_help">

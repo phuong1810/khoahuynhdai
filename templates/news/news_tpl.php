@@ -1,7 +1,6 @@
 <div class="wrap-news">
     <div class="wrap-content">
         <div class="title-global title-global--center">
-            <div class="ttl"><span>Thần Sơn Group</span></div>
             <h2 class="ttl2"><?= (!empty($titleCate)) ? $titleCate : @$titleMain ?></h2>
         </div>
 

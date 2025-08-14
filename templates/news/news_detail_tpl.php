@@ -5,7 +5,7 @@
                 <div class="title-main"><span><?= $rowDetail['name' . $lang] ?></span></div>
                 <div class="time-main"><i class="fas fa-calendar-week"></i><span><?= ngaydang ?>: <?= date("d/m/Y h:i A", $rowDetail['date_created']) ?></span></div>
                 <?php if (!empty($rowDetail['content' . $lang])) { ?>
-                    <div class="cont-detail">
+                    <div class="cont-detail cms-content">
                         <div class="content-main w-clear" id="toc-content"><?= $func->decodeHtmlChars($rowDetail['content' . $lang]) ?></div>
                         <div class="share">
                             <b><?= chiase ?>:</b>
@@ -37,7 +37,6 @@
     <div class="box-detail">
         <div class="wrap-content">
             <div class="title-global">
-                <div class="ttl">BĂNG KEO THẦN SƠN</div>
                 <div class="ttl2">Bài viết khác</div>
             </div>
             <div class="content-main row">
